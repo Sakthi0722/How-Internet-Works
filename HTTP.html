@@ -48,28 +48,35 @@
     </nav>
 </header>
 <div class="container">
-    <h1 class="text-center">DNS</h1>
+    <h1 class="text-center">HTTP and HTTPS protocols</h1>
     <hr>
-    <p class="text-justify">The Domain Name System (DNS) is the phonebook of the Internet. Humans access information online through domain names, like nytimes.com or espn.com. Web browsers interact through Internet Protocol (IP) addresses. DNS translates domain names to IP addresses so browsers can load Internet resources.</p>
-    <p class="text-justify">Each device connected to the Internet has a unique IP address which other machines use to find the device. DNS servers eliminate the need for humans to memorize IP addresses such as 192.168.1.1 (in IPv4), or more complex newer alphanumeric IP addresses such as 2400:cb00:2048:1::c629:d7a2 (in IPv6).</p>
-    <h4 class="text-left">Steps in a DNS lookup:</h4>
+    <h3 class="text-left">HTTP:</h3>
+    <p class="text-justify">HTTP is Hypertext transfer protocol. Simply put - Rules to sending and receiving text-based messages. As we all know, computers work in a language of 1's and 0's i.e. Binary language. Therefore, potentially every set of 1's and 0's construct something, it could be a word.</p>
+    <p class="text-justify">Let's say I want to write 'a'. Now, if 0 stands for 'a', 1 stands for 'b', and 01 stands for 'c', I can infer that a combination of 0's and 1's can construct a word as well. In this case, the text is already constructed and is being sent on the wire. The computer works on many languages - pure binary, text and some other formats like byte codes. Here, what is being transferred is text. I am emphasizing on 'text' because this text is interpreted by the browser and the moment browser interprets it, it becomes hypertext, and the protocol that transfers the text is referred to as hypertext transfer protocol - HTTP. Using HTTP, you can definitely transfer images and text and even sound, but not videos.</p>
+    <h3 class="text-left">HTTPS:</h3>
+    <p class="text-justify">Hyper Text Transfer Protocol Secure (HTTPS) is the secure version of HTTP, the protocol over which data is sent between your browser and the website that you are connected to. The 'S' at the end of HTTPS stands for 'Secure'. It means all communications between your browser and the website are encrypted. HTTPS is often used to protect highly confidential online transactions like online banking and online shopping order forms.</p>
+    <h4>Advantages of HTTPS:</h4>
     <ul>
-        <li>A user types ‘example.com’ into a web browser and the query travels into the Internet and is received by a DNS recursive resolver.</li>
-        <li>The resolver then queries a DNS root nameserver (.).</li>
-        <li>The root server then responds to the resolver with the address of a Top Level Domain (TLD) DNS server (such as .com or .net), which stores the information for its domains. When searching for example.com, our request is pointed toward the .com TLD.</li>
-        <li>The resolver then makes a request to the .com TLD.</li>
-        <li>The TLD server then responds with the IP address of the domain’s nameserver, example.com.</li>
-        <li>Lastly, the recursive resolver sends a query to the domain’s nameserver.</li>
-        <li>The IP address for example.com is then returned to the resolver from the nameserver.</li>
-        <li>The DNS resolver then responds to the web browser with the IP address of the domain requested initially.</li>
+        <li>In most cases, sites running over HTTPS will have a redirect in place. Therefore, even if you type in HTTP:// it will redirect to an https over a secured connection.</li>
+        <li>It allows users to perform secure e-commerce transaction, such as online banking.</li>
+        <li>SSL technology protects any users and builds trust.</li>
+        <li>An independent authority verifies the identity of the certificate owner. So each SSL Certificate contains unique, authenticated information about the certificate owner.</li>
     </ul>
-    <p class="text-justify">Once the 8 steps of the DNS lookup have returned the IP address for example.com, the browser is able to make the request for the web page:</p>
+    <h4>Types of SSL/TLS certificate used with HTTPS:</h4>
+    <p class="text-justify"><b>Domain Validation:</b>Domain validation validates that the person who applies for a certificate is an owner of the domain name. This type of validation generally takes a few minutes up to a few hours.</p>
+    <p class="text-justify"><b>Organization Validation:</b>The Certification Authority not only validate the domain's ownership but also owners identify. It means that an owner might be asked to provide the personal ID proof document to prove their identity.</p>
+    <p class="text-justify"><b>Extended Validation:</b>Extended validation is a topmost level of validation. It includes validation of domain ownership, owner identity as well as registration proof of business.</p>
+    <img src="https://www.cloudflare.com/img/learning/security/glossary/what-is-ssl/http-vs-https.svg" class="d-block w-100" alt="...">
+    <p class="text-justify">(Image Credits:https://www.cloudflare.com/)(Above image clearly shows the difference between)
+    <br>
+    <h4>Key Difference:</h4>
     <ul>
-        <li>The browser makes a HTTP request to the IP address.</li>
-        <li>The server at that IP returns the webpage to be rendered in the browser.</li>
+        <li>HTTP lacks security mechanism to encrypt the data whereas HTTPS provides SSL or TLS Digital Certificate to secure the communication between server and client.</li>
+        <li>HTTP operates at Application Layer whereas HTTPS operates at Transport Layer.</li>
+        <li>HTTP by default operates on port 80 whereas HTTPS by default operates on port 443.</li>
+        <li>HTTP transfers data in plain text while HTTPS transfers data in cipher text (encrypt text).</li>
+        <li>HTTP is fast as compared to HTTPS because HTTPS consumes computation power to encrypt the communication channel.</li>
     </ul>
-    <img src="https://www.appneta.com/assets/Screen-Shot-2018-12-20-at-4.25.01-PM.png" class="d-block w-100" alt="...">
-    <p class="text-justify">(Image Credit:https://www.appneta.com/)(How DNS WOrks)</p>
     <br>
 
 </div>
