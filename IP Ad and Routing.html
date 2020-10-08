@@ -65,6 +65,30 @@
     <p class="text-justify"><b>Name resolution:</b>
     <p class="text-justify">In both IPv4 and IPv6, remembering the IP address of every device is not possible, except on the smallest of networks. Name resolution provides a way to lookup an IP address from an easier to use name.On the internet, name resolution is handled by the Domain Name System (DNS). With DNS, a name in the format host. Domain can be used in place of the destination’s IP address. When the connection is initiated, the source host will request the IP address of the destination host from a DNS server. The DNS server will reply with the destination’s IP address. This IP address will then be used for all communications sent to that name.</p>
     <br>
+    <h3 class="text-left">Packets:</h3>
+    <p class="text-justify">A packet is a small amount of data sent over a network, such as a LAN or the Internet. Similar to a real-life package, each packet includes a source and destination as well as the content (or data) being transferred. When the packets reach their destination, they are reassembled into a single file or other contiguous block of data.While the exact structure of a packet varies between protocols, a typical packet includes two sections — a header and payload. Information about the packet is stored in the header. For example, an IPv6 header includes the following fields:</p>
+    <ul>
+        <li>Source address (128 bits) - IPv6 address of the packet origin</li>
+        <li>Destination address (128 bits) - IPv6 address of the packet destination</li>
+        <li>Version (4 bits) - "6" for IPv6</li>
+        <li>Traffic class (8 bits) - priority setting for the packet</li>
+        <li>Flow label (20 bits) - optional ID that labels the packet as part of a specific flow; used to distinguish between multiple transmissions from a single origin</li>
+        <li>Payload length (16 bits) - size of the data, defined in octets</li>
+        <li>Next header (8 bits) - ID of the header following the current packet; may be TCP, UDP, or another protocol</li>
+        <li>Hop limit (8 bits) - maximum number of network hops (between routers, switches, etc) before the packet is dropped; also known as "TTL" in IPv4</li>
+    </ul>
+    <h4 class="text-left">Example:</h4>
+    <img src="https://s3-eu-west-1.amazonaws.com/rpf-futurelearn/Networking/Artwork/FoN-2.4-IPaddress.png" class="d-block w-100" alt="...">
+    <p class="text-justify">(Image Credit:https://www.futurelearn.com/)(Above image is an Example for Packet)</p>
+    <br>
+    <p class="text-justify">The payload section of a packet contains the actual data being transferred. This is often just a small part of a file, webpage, or other transmission, since individual packets are relatively small. For example, the maximum size of an IP packet payload is 65,535 bytes, or 64 kilobytes. The maximum size of an Ethernet packet or "frame" is only 1,500 bytes or 1.5 kilobytes.Packets are intended to transfer data reliably and efficiently. Instead of transferring a large file as a single block of data, sending smaller packets helps ensure each section is transmitted successfully. If a packet is not received or is "dropped," only the dropped packet needs to be resent. Additionally, if a data transfer encounters network congestion due to multiple simultaneous transfers, the remaining packets can be rerouted through a less congested path.</p>
+    <br>
+    <h3 class="text-left">Routers and Routing:</h3>
+    <p class="text-justify">Routers got their name because they route IP Packets across networks: a router device connects different links. It examines IP packet headers, looking at the destination address and consulting a routing table of known networks. The table indicates which connections to send the packet on as the next link. The connections on a router are called interfaces: through the router, they interface between different link types.</p>
+    <img src="https://s3-eu-west-1.amazonaws.com/rpf-futurelearn/Networking/Artwork/FoN-2.4-routerIP.png" class="d-block w-100" alt="...">
+    <p class="text-justify">(Image Credit:https://www.futurelearn.com/)(Above image is an Example for Routing)</p>
+    <br>
+    <p class="text-justify">In the image, an IP packet arrives at a router, which compares the packet’s destination address with the networks in the routing table. The packet is identified as belonging to network A, so the router routes it out of interface 1. Often, routers learn how to reach distant networks by exchanging information with their neighbouring routers and building their own routing tables. This exchange of information to learn about other networks is called a routing protocol.</p>
 
 </div>
 <footer class="site-footer">
