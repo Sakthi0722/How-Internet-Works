@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="css/content.css" rel="stylesheet">
+
+    <title>How Internet Works</title>
+</head>
+<body>
+<header class=".bg-dark">
+    <!-- Content here -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        How Internet Works
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Domain Names and ICANN</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">IP Addresses, Packets and Routing</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">DNS</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">HTTP and HTTPS protocols</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">W3C and HTML and CSS
+                        </a>
+                    </div>
+            </ul>
+        </div>
+    </nav>
+</header>
+<div class="container">
+    <h1 class="text-center">DNS</h1>
+    <hr>
+    <p class="text-justify">The Domain Name System (DNS) is the phonebook of the Internet. Humans access information online through domain names, like nytimes.com or espn.com. Web browsers interact through Internet Protocol (IP) addresses. DNS translates domain names to IP addresses so browsers can load Internet resources.</p>
+    <p class="text-justify">Each device connected to the Internet has a unique IP address which other machines use to find the device. DNS servers eliminate the need for humans to memorize IP addresses such as 192.168.1.1 (in IPv4), or more complex newer alphanumeric IP addresses such as 2400:cb00:2048:1::c629:d7a2 (in IPv6).</p>
+    <h4 class="text-left">Steps in a DNS lookup:</h4>
+    <ul>
+        <li>A user types ‘example.com’ into a web browser and the query travels into the Internet and is received by a DNS recursive resolver.</li>
+        <li>The resolver then queries a DNS root nameserver (.).</li>
+        <li>The root server then responds to the resolver with the address of a Top Level Domain (TLD) DNS server (such as .com or .net), which stores the information for its domains. When searching for example.com, our request is pointed toward the .com TLD.</li>
+        <li>The resolver then makes a request to the .com TLD.</li>
+        <li>The TLD server then responds with the IP address of the domain’s nameserver, example.com.</li>
+        <li>Lastly, the recursive resolver sends a query to the domain’s nameserver.</li>
+        <li>The IP address for example.com is then returned to the resolver from the nameserver.</li>
+        <li>The DNS resolver then responds to the web browser with the IP address of the domain requested initially.</li>
+    </ul>
+    <p class="text-justify">Once the 8 steps of the DNS lookup have returned the IP address for example.com, the browser is able to make the request for the web page:</p>
+    <ul>
+        <li>The browser makes a HTTP request to the IP address.</li>
+        <li>•	The server at that IP returns the webpage to be rendered in the browser.</li>
+    </ul>
+    <img src="https://www.appneta.com/assets/Screen-Shot-2018-12-20-at-4.25.01-PM.png" class="d-block w-100" alt="...">
+    <p class="text-justify">(Image Credit:https://www.appneta.com/)(How DNS WOrks)</p>
+    <br>
+</div>
+
+
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="col-xs-12 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+                <li><a href="http://scanfcode.com/about/">About</a></li>
+                <li><a href="http://scanfcode.com/contact/">Domain and ICANN</a></li>
+                <li><a href="http://scanfcode.com/contribute-at-scanfcode/">IP and Routing</a></li>
+                <li><a href="http://scanfcode.com/privacy-policy/">DNS</a></li>
+                <li><a href="http://scanfcode.com/sitemap/">Http and Https</a></li>
+                <li><a href="http://scanfcode.com/sitemap/">HTML and CSS</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+</html>
